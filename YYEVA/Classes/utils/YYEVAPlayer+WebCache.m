@@ -25,17 +25,31 @@ static char kYYEVACurrentURLKey;
 
 #pragma mark - Methods
 
+// 1. 默认方法：转发给全能方法，默认 repeatCount = 0 (无限循环)
 - (void)playWithUrl:(NSString *)urlStr {
-    [self playWithUrl:urlStr completion:nil];
+    [self playWithUrl:urlStr repeatCount:0 completion:nil];
 }
 
+// 2. 带回调方法：默认 repeatCount = 0
 - (void)playWithUrl:(NSString *)urlStr completion:(void (^)(BOOL))completion {
+    [self playWithUrl:urlStr repeatCount:0 completion:completion];
+}
+
+// 3. 指定次数方法：不带回调
+- (void)playWithUrl:(NSString *)urlStr repeatCount:(NSInteger)repeatCount {
+    [self playWithUrl:urlStr repeatCount:repeatCount completion:nil];
+}
+
+// 4. ⭐️ 全能主方法
+- (void)playWithUrl:(NSString *)urlStr repeatCount:(NSInteger)repeatCount completion:(void (^)(BOOL))completion {
+    
+    // 记录当前 URL，处理复用
     self.currentLoadURL = urlStr;
     
-    // 停止当前正在播放的动画 (可选，视需求而定)
+    // 停止旧动画
     [self stopAnimation];
     
-    // 如果 URL 为空，直接返回
+    // 校验空 URL
     if (!urlStr || urlStr.length == 0) {
         if (completion) completion(NO);
         return;
@@ -43,25 +57,23 @@ static char kYYEVACurrentURLKey;
     
     __weak typeof(self) weakSelf = self;
     
-    // 调用 Loader 进行加载
+    // 调用 Loader 下载
     [[YYEVALoader sharedLoader] loadVideoWithUrl:urlStr completion:^(NSString * _Nullable filePath, NSError * _Nullable error) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         if (!strongSelf) return;
         
-        // ⭐️ 核心校验：
-        // 下载完成时，检查这个 View 的 currentURL 是否还等于当初请求的 URL。
-        // 如果不相等，说明 View 在下载期间被复用给了其他数据，这个结果必须丢弃！
+        // 校验 URL 是否匹配 (防止 Cell 复用错乱)
         if (![strongSelf.currentLoadURL isEqualToString:urlStr]) {
-            // NSLog(@"[YYEVA] URL mismatch, ignore result.");
             return;
         }
         
         if (filePath && !error) {
-            // 调用原生的本地播放方法
-            [strongSelf play:filePath];
+            // ⭐️ 核心修改点：调用带 repeatCount 的原生播放方法
+            [strongSelf play:filePath repeatCount:repeatCount];
+            
             if (completion) completion(YES);
         } else {
-            // NSLog(@"[YYEVA] Load failed: %@", error);
+            // 下载失败
             if (completion) completion(NO);
         }
     }];
