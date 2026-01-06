@@ -405,5 +405,98 @@
     _volume = volume;
     self.audioPlayer.volume = volume;
 }
+
+- (void)seekToTime:(NSTimeInterval)time
+{
+    // 1. 范围校验
+    if (time < 0) time = 0;
+    if (time > self.videoDuration) time = self.videoDuration;
+
+    // 2. 音频跳转 (如果存在)
+    if (self.audioPlayer) {
+        BOOL wasPlaying = self.audioPlayer.isPlaying;
+        if (wasPlaying) {
+            [self.audioPlayer stop];
+        }
+        // 注意：AVAudioPlayer 的 currentTime 设值后需要重新 prepare 或 play
+        self.audioPlayer.currentTime = time;
+        if (wasPlaying) {
+            [self.audioPlayer play];
+        }
+    }
+
+    // 3. 视频跳转 (重置 AVAssetReader)
+    // 必须在读取队列中同步执行，防止与 readVideoTracksIntoQueueIfNeed 冲突
+    dispatch_sync(self.readVideoBufferQueue, ^{
+        
+        // A. 停止当前的读取器
+        if (self.reader && self.reader.status == AVAssetReaderStatusReading) {
+            [self.reader cancelReading];
+        }
+        
+        // B. 清空现有的帧缓存
+        if (self->_sampleBufferQueue) {
+            CFIndex count = CFArrayGetCount(self->_sampleBufferQueue);
+            for (CFIndex i = 0; i < count; i++) {
+                CMSampleBufferRef ref = (CMSampleBufferRef)CFArrayGetValueAtIndex(self->_sampleBufferQueue, i);
+                if (ref) {
+                    CMSampleBufferInvalidate(ref);
+                    CFRelease(ref);
+                }
+            }
+            CFArrayRemoveAllValues(self->_sampleBufferQueue);
+        }
+        
+        // C. 重新构建 Reader
+        // 因为 self.reader 是一次性的，无法复用，必须新建
+        AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:[NSURL fileURLWithPath:self.filePath] options:nil];
+        if (!asset) return;
+        
+        NSError *error = nil;
+        AVAssetReader *reader = [AVAssetReader assetReaderWithAsset:asset error:&error];
+        if (!reader) {
+            NSLog(@"YYEVA: Seek failed, create reader error: %@", error);
+            return;
+        }
+        
+        AVAssetTrack *videoTrack = [[asset tracksWithMediaType:AVMediaTypeVideo] firstObject];
+        if (!videoTrack) return;
+        
+        // --- 关键点：设置 TimeRange ---
+        // 告诉 Reader 从 time 开始读，一直读到结束
+        CMTime startTime = CMTimeMakeWithSeconds(time, 600);
+        reader.timeRange = CMTimeRangeMake(startTime, kCMTimePositiveInfinity);
+        
+        // 配置输出参数 (保持与 loadVideo 一致)
+        NSDictionary *outputSettings = @{
+            (id)kCVPixelBufferPixelFormatTypeKey:@(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange),
+            (id)kCVPixelBufferMetalCompatibilityKey: @(YES),
+        };
+        
+        AVAssetReaderTrackOutput *output = [AVAssetReaderTrackOutput assetReaderTrackOutputWithTrack:videoTrack outputSettings:outputSettings];
+        output.alwaysCopiesSampleData = NO;
+        
+        if ([reader canAddOutput:output]) {
+            [reader addOutput:output];
+        }
+        
+        // D. 开始读取
+        if ([reader startReading]) {
+            self.reader = reader;
+            self.output = output;
+            
+            // E. 修正帧索引
+            // 确保后续的回调能告诉上层当前是第几帧
+            if (self.frameDuration > 0) {
+                self->_frameIndex = (NSUInteger)(time / self.frameDuration);
+            }
+        } else {
+            NSLog(@"YYEVA: Seek reader start reading failed: %@", reader.error);
+        }
+    });
+    
+    // 4. 立即触发一次读取，填充缓存
+    [self readVideoTracksIntoQueueIfNeed];
+}
  
 @end

@@ -1,0 +1,23 @@
+PODS:
+  - Masonry (1.1.0)
+  - YYEVA (1.1.37)
+
+DEPENDENCIES:
+  - Masonry
+  - YYEVA (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+
+EXTERNAL SOURCES:
+  YYEVA:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  YYEVA: 9bb7cb02742c241b97ee2ba6182315af630cb5e2
+
+PODFILE CHECKSUM: fed45675e281b173e6087ba9fda1c6611400f1d4
+
+COCOAPODS: 1.16.2

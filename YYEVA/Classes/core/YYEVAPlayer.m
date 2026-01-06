@@ -69,14 +69,15 @@
         self.mode = YYEVAContentMode_ScaleAspectFit;
         self.regionMode = YYEVAColorRegion_NoSpecify;
         self.repeatCount = 1;
+        self.loopStartTime = 0;
         _volume = 1;
         _isFirstPlay = YES;
     }
     return self;
-} 
+}
 
 - (void)dealloc
-{ 
+{
     [self stopAnimation];
 }
 
@@ -188,13 +189,23 @@
     self.videoRender.completionPlayBlock = ^{
         weakSelf.isFirstPlay = NO;
         if (weakSelf.loop) {
-            [weakSelf.assets reload];
+            // 如果设置了循环起点，且大于0，则使用 seek 跳转
+            if (weakSelf.loopStartTime > 0) {
+                [weakSelf seekToTime:weakSelf.loopStartTime];
+            } else {
+                // 否则保持原有逻辑（从头重载）
+                [weakSelf.assets reload];
+            }
             [weakSelf timerStart];
         } else {
             [weakSelf timerEnd];
             weakSelf.repeatCount--;
             if (weakSelf.repeatCount > 0) {
-                [weakSelf.assets reload];
+                if (weakSelf.loopStartTime > 0) {
+                    [weakSelf seekToTime:weakSelf.loopStartTime];
+                } else {
+                    [weakSelf.assets reload];
+                }
                 [weakSelf timerStart];
             } else {
                 [weakSelf endPlay:NO];
@@ -292,6 +303,32 @@
     [self timerStart];
     
     [self.assets resumeAudio];
+}
+
+- (void)seekToTime:(NSTimeInterval)time
+{
+    // 1. 强制在主线程执行，确保与 play 方法的初始化逻辑按顺序串行
+    if (![NSThread isMainThread]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self seekToTime:time];
+        });
+        return;
+    }
+
+    // 2. 安全检查
+    // 确保 assets 已经创建，且 loadVideo 已经完成 (通过检查 videoDuration 或 audioPlayer 是否已尝试初始化)
+    if (self.assets) {
+        // 如果文件本身有音频但 audioPlayer 还没出来，说明 loadVideo 可能还没跑完
+        // 这里做一个简单的保护，或者依赖 dispatch_async 的队列顺序特性通常就足够了
+        
+        if ([self.assets respondsToSelector:@selector(seekToTime:)]) {
+            [self.assets seekToTime:time];
+            
+            if (!self.timer) {
+                [self.mtkView draw];
+            }
+        }
+    }
 }
 
 #pragma mark - get/set

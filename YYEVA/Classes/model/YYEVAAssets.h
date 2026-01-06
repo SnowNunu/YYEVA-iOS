@@ -60,6 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)resumeAudio;
 - (void)reload;
 - (BOOL)existAudio;
+- (void)seekToTime:(NSTimeInterval)time;
 
 @end
 

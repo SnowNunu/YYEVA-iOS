@@ -62,6 +62,12 @@ NS_ASSUME_NONNULL_BEGIN
 // 禁用CVMetalTextureCache，内存下降明显，CPU略微上涨，可根据业务灵活使用。默认NO
 @property (nonatomic, assign) BOOL disalbleMetalCache;
 
+/**
+ 循环播放的起始时间（秒）。
+ 默认为 0。如果设置为 3.0，则第一遍播放完后，后续循环都会从 3.0 秒开始。
+ */
+@property (nonatomic, assign) NSTimeInterval loopStartTime;
+
 //播放
 - (void)play:(NSString *)fileUrl;
 // 0表示一直循环播放
@@ -74,6 +80,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)pause;
 - (void)resume;
 - (void)stopAnimation;
+- (void)seekToTime:(NSTimeInterval)time;
 
 //设置相关动态属性
 - (void)setText:(NSString *)text forKey:(NSString *)key;
