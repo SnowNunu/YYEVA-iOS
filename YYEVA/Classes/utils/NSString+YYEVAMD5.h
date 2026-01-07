@@ -9,8 +9,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#import <Foundation/Foundation.h>
-
 @interface NSString (YYEVAMD5)
 
 - (NSString *)yyeva_md5String;

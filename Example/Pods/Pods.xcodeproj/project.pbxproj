@@ -44,7 +44,7 @@
 		AE7B02645B8F769CA5F215EE8F7CC5B0 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 047EE388CF208BD5F57049BD98558C94 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B59E60FBC9665FC1061B88B8E6FD9FAF /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CF8069504999FB8BF5FA1529175AA74 /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B680C2604BD8BC9644AE7C67BC46B9BB /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FF4AF21902029EC43C354AC0978CE49 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B84017D2EC4451600CA50CC65DF76876 /* YYEVA-YYEVABundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D5A0AB4203A1313D2D10FC168405A9A /* YYEVA-YYEVABundle */; };
+		B84017D2EC4451600CA50CC65DF76876 /* YYEVABundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D5A0AB4203A1313D2D10FC168405A9A /* YYEVABundle.bundle */; };
 		BA904ABA8ED36CC4E5EB2B2004CA1F18 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD89987EC7EAE20D7034EEF9935E7CC /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF22D137EF6324675FA50080C5D93C00 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 30EC6C5D191587619B42076546EDC448 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2068AEACC2D9C7F1FFE41AA25B12A68 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 607937A372913475EE7EAE532760ACD4 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -101,10 +101,10 @@
 		02CA69FDFD4D7BB11F8E3E2E7A0B9879 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
 		047EE388CF208BD5F57049BD98558C94 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
 		071EEE0A3CE36E163E09EA7F7915F1DE /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
-		0AEAEE3A749242AB07C63918AC61ECB3 /* YYEVA */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YYEVA; path = YYEVA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D5A0AB4203A1313D2D10FC168405A9A /* YYEVA-YYEVABundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "YYEVA-YYEVABundle"; path = YYEVABundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D702A14A47F332B84C69BEE0A820617 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		1FFED36A657123030ABB700256D73F15 /* Masonry */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AEAEE3A749242AB07C63918AC61ECB3 /* YYEVA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YYEVA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D5A0AB4203A1313D2D10FC168405A9A /* YYEVABundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYEVABundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D702A14A47F332B84C69BEE0A820617 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		208C45D31AE66444539963062D5291BC /* IYYEVAVideoRenderProtol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IYYEVAVideoRenderProtol.h; sourceTree = "<group>"; };
 		215A7CA0A5E5D79F53A8C9013AAEF1E0 /* YYEVACommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YYEVACommon.h; sourceTree = "<group>"; };
 		27E12E3D2779B5C7A8301A94F715DB4C /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 		3C107B06A592D933D6FDDE30DEDC51AE /* YYEVA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYEVA-dummy.m"; sourceTree = "<group>"; };
 		3E537C1F47DA8B06DA4A71E3D14F4DE4 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
 		40177E3B5797F7AEF1AA59E14DC43A21 /* ResourceBundle-YYEVABundle-YYEVA-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-YYEVABundle-YYEVA-Info.plist"; sourceTree = "<group>"; };
-		4153976B4D5A1244215182ACB824646A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		4153976B4D5A1244215182ACB824646A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		419A961AD957E23BAB6A998ED7623134 /* Masonry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.release.xcconfig; sourceTree = "<group>"; };
 		470C5CD1265270E95A8A89443C727427 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
 		4AD89987EC7EAE20D7034EEF9935E7CC /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		50B4CCC2A5E96BE43869ABE96A73DD41 /* NSString+YYEVAMD5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYEVAMD5.m"; sourceTree = "<group>"; };
 		55960467D1B758EC688A18A171012E78 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		59AF18626093D5542B089415B67618B7 /* YYEVAPlayer+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYEVAPlayer+WebCache.m"; sourceTree = "<group>"; };
-		5FB52B7FFA457ECC1B3C23D2FC221A25 /* Pods-YYEVA_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-YYEVA_Example"; path = Pods_YYEVA_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FB52B7FFA457ECC1B3C23D2FC221A25 /* Pods_YYEVA_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYEVA_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607937A372913475EE7EAE532760ACD4 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
 		6BD08303E46F226014D329DCE55C5DA1 /* Pods-YYEVA_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YYEVA_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6CF8069504999FB8BF5FA1529175AA74 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
@@ -146,9 +146,9 @@
 		8AAA0B49EDA5A0BBC42E07FF039B457E /* YYEVAPlayer+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYEVAPlayer+WebCache.h"; sourceTree = "<group>"; };
 		8AEEBD88282BA13360CAA867D8465C75 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
 		9073C3B74BC30C55B4EB5B2A596EAD72 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		98F4C733CF98A9D328475DD4EEAD6F2B /* YYEVAPlayer_render.metal */ = {isa = PBXFileReference; includeInIndex = 1; path = YYEVAPlayer_render.metal; sourceTree = "<group>"; };
+		98F4C733CF98A9D328475DD4EEAD6F2B /* YYEVAPlayer_render.metal */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.metal; path = YYEVAPlayer_render.metal; sourceTree = "<group>"; };
 		9A55102D3954C05CE7B1F6F6480C6EF7 /* YYEVA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YYEVA.debug.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A134BE386666B5CD15451A1B46F9DF1B /* Pods-YYEVA_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YYEVA_Example-umbrella.h"; sourceTree = "<group>"; };
 		A78D3443F105E00FC21FE5A357C8F716 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		A85AE9E36F67A1B513CB8DA940771B4F /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 		F287598D192FA586BD4AECCD85B988A4 /* Masonry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.debug.xcconfig; sourceTree = "<group>"; };
 		F385F0C974A33456EC48E02C56F0F959 /* YYEVA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYEVA.h; path = YYEVA/Classes/YYEVA.h; sourceTree = "<group>"; };
 		F42128BB46581CD3E31F02F241981212 /* YYEVAPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YYEVAPlayer.h; sourceTree = "<group>"; };
-		F455CEE90BE9D589879796D1ED3E2B60 /* YYEVA.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YYEVA.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F455CEE90BE9D589879796D1ED3E2B60 /* YYEVA.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = YYEVA.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		F7A607BB7487BE6B14129D18B60CC400 /* YYEVAVideoShareTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YYEVAVideoShareTypes.h; sourceTree = "<group>"; };
 		F8BE7883EC5EDC776CF3845C40250F72 /* YYEVA-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYEVA-prefix.pch"; sourceTree = "<group>"; };
 		F9CE1B88552129BDF463D354BF422E57 /* YYEVA-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YYEVA-Info.plist"; sourceTree = "<group>"; };
@@ -269,7 +269,6 @@
 				342C4D9B5E1E36390E7AF01E35444998 /* ViewController+MASAdditions.m */,
 				C84A449C2DE4F91F0620A5147DD42E0F /* Support Files */,
 			);
-			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -300,10 +299,10 @@
 		1AED556C9E004359D12D0F82CED1CFDB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1FFED36A657123030ABB700256D73F15 /* Masonry */,
-				5FB52B7FFA457ECC1B3C23D2FC221A25 /* Pods-YYEVA_Example */,
-				0AEAEE3A749242AB07C63918AC61ECB3 /* YYEVA */,
-				0D5A0AB4203A1313D2D10FC168405A9A /* YYEVA-YYEVABundle */,
+				1FFED36A657123030ABB700256D73F15 /* Masonry.framework */,
+				5FB52B7FFA457ECC1B3C23D2FC221A25 /* Pods_YYEVA_Example.framework */,
+				0AEAEE3A749242AB07C63918AC61ECB3 /* YYEVA.framework */,
+				0D5A0AB4203A1313D2D10FC168405A9A /* YYEVABundle.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -444,7 +443,6 @@
 			children = (
 				215A7CA0A5E5D79F53A8C9013AAEF1E0 /* YYEVACommon.h */,
 			);
-			name = common;
 			path = common;
 			sourceTree = "<group>";
 		};
@@ -535,7 +533,7 @@
 			);
 			name = Masonry;
 			productName = Masonry;
-			productReference = 1FFED36A657123030ABB700256D73F15 /* Masonry */;
+			productReference = 1FFED36A657123030ABB700256D73F15 /* Masonry.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8F733E020EC85D81923E429FBF23A8DE /* YYEVA-YYEVABundle */ = {
@@ -552,7 +550,7 @@
 			);
 			name = "YYEVA-YYEVABundle";
 			productName = YYEVABundle;
-			productReference = 0D5A0AB4203A1313D2D10FC168405A9A /* YYEVA-YYEVABundle */;
+			productReference = 0D5A0AB4203A1313D2D10FC168405A9A /* YYEVABundle.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		9824471EC3DA06F5050FDB161C6932EF /* Pods-YYEVA_Example */ = {
@@ -572,7 +570,7 @@
 			);
 			name = "Pods-YYEVA_Example";
 			productName = Pods_YYEVA_Example;
-			productReference = 5FB52B7FFA457ECC1B3C23D2FC221A25 /* Pods-YYEVA_Example */;
+			productReference = 5FB52B7FFA457ECC1B3C23D2FC221A25 /* Pods_YYEVA_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EE46A1DF56DC6AA77AB1925AF02F1396 /* YYEVA */ = {
@@ -591,7 +589,7 @@
 			);
 			name = YYEVA;
 			productName = YYEVA;
-			productReference = 0AEAEE3A749242AB07C63918AC61ECB3 /* YYEVA */;
+			productReference = 0AEAEE3A749242AB07C63918AC61ECB3 /* YYEVA.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -612,8 +610,6 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 1AED556C9E004359D12D0F82CED1CFDB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -646,7 +642,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B84017D2EC4451600CA50CC65DF76876 /* YYEVA-YYEVABundle in Resources */,
+				B84017D2EC4451600CA50CC65DF76876 /* YYEVABundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1082,8 +1078,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
