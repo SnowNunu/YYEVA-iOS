@@ -18,7 +18,6 @@
 		37B890ABDC7DD441E6AA662325D412E6 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 02CA69FDFD4D7BB11F8E3E2E7A0B9879 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FF766D63019D464AB0D510E2757E159 /* YSVideoMetalUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D82E2803E5E563284573277CF5DDCBA /* YSVideoMetalUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42611F81AB521027A882812EC4A04D87 /* YYEVAAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = F01284E081180F2C91AA1F16E62D11A9 /* YYEVAAssets.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4571A0EA37DC84F39E3830D38A1531AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF4CA3AF5536D14B4E015504E7AEEC0 /* UIKit.framework */; };
 		56E800EB3B2BE8AE0BA45A30974D7920 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A85AE9E36F67A1B513CB8DA940771B4F /* Masonry-dummy.m */; };
 		5AF48B9B227FA0A1E764FFD5D3D35693 /* YYEVAPlayer_render.metal in Resources */ = {isa = PBXBuildFile; fileRef = 98F4C733CF98A9D328475DD4EEAD6F2B /* YYEVAPlayer_render.metal */; };
 		5B08596E856E4CC2F34A8A2372F9F764 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEEBD88282BA13360CAA867D8465C75 /* NSArray+MASAdditions.m */; };
@@ -40,35 +39,36 @@
 		98E83E0502D0783C69AA4E874788131C /* YYEVAEffectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B247CF755EC73F8918AFBEDC3D4CD224 /* YYEVAEffectInfo.m */; };
 		A1D42E2898B14F6C76802EA0440EB195 /* YYEVARegionChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EA112CCC6C1AF60ACE7C55AD56C5B2 /* YYEVARegionChecker.m */; };
 		A232D4E49DA99D14F04A96EBD78A7C2B /* YYEVALoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EAEBFB679E2C01C98502F91BB0DADB /* YYEVALoader.m */; };
+		A6AA9E1B93FB36290486842AAB105987 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81617CAA1204D998E4C0C7E1B3DA8BF /* UIKit.framework */; };
 		ADC274B4C30DF9DB3918900E7A0CC36A /* YYEVAPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 830FCBBBEC850C7C2A8C7EC95DA8F629 /* YYEVAPlayer.m */; };
 		AE7B02645B8F769CA5F215EE8F7CC5B0 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 047EE388CF208BD5F57049BD98558C94 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B59E60FBC9665FC1061B88B8E6FD9FAF /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CF8069504999FB8BF5FA1529175AA74 /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B680C2604BD8BC9644AE7C67BC46B9BB /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FF4AF21902029EC43C354AC0978CE49 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B84017D2EC4451600CA50CC65DF76876 /* YYEVABundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D5A0AB4203A1313D2D10FC168405A9A /* YYEVABundle.bundle */; };
+		B84017D2EC4451600CA50CC65DF76876 /* YYEVA-YYEVABundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D5A0AB4203A1313D2D10FC168405A9A /* YYEVA-YYEVABundle */; };
 		BA904ABA8ED36CC4E5EB2B2004CA1F18 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD89987EC7EAE20D7034EEF9935E7CC /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF22D137EF6324675FA50080C5D93C00 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 30EC6C5D191587619B42076546EDC448 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2068AEACC2D9C7F1FFE41AA25B12A68 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 607937A372913475EE7EAE532760ACD4 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C27BD906706D2632FE01F6BC21E1F509 /* YYEVARegionChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 36F7C12166A83C7ABE5F6008218D88A8 /* YYEVARegionChecker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2FE60A10C792613E45031AE6E851ECB /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A95F8027E3EB86CB9AE2D7539201FE /* MASViewConstraint.m */; };
+		C41CC7916B26A20092D59FD090EDB647 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0629B8BF330FF9DE71ABB83307CFC1 /* Foundation.framework */; };
 		C4A63126C103E4F398C8412A1B7C0BFF /* YYEVAVideoEffectRender.h in Headers */ = {isa = PBXBuildFile; fileRef = D889264AAB80F73F1B842C3122748A9E /* YYEVAVideoEffectRender.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C857B8D2D0BAA5A8A764F9E1C4B85807 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C4D9B5E1E36390E7AF01E35444998 /* ViewController+MASAdditions.m */; };
 		C8EC35DFB0945DBE2F2FF9ECFE6D9711 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 071EEE0A3CE36E163E09EA7F7915F1DE /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		C9E19D164C26414115CC969ED9A303C1 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E17443EA85E103F4DD0553AB6BB942A /* MASLayoutConstraint.m */; };
-		D329DC26B040AD609BBFDDA9EF179286 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8193349D819536E58C58A34C1B7DF545 /* Foundation.framework */; };
-		D663837F4347AF58660EE6F7FD426ECE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8193349D819536E58C58A34C1B7DF545 /* Foundation.framework */; };
 		D7885B15FEF2367B890AAD6F384085C0 /* Pods-YYEVA_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A134BE386666B5CD15451A1B46F9DF1B /* Pods-YYEVA_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D788BA4B9E8186271BA75CA52B30502C /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4497913DB548AE2E03103D3A97F34F /* View+MASAdditions.m */; };
+		D9DA94665D7C3E8F90644B2C43FFF1BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0629B8BF330FF9DE71ABB83307CFC1 /* Foundation.framework */; };
 		DA4CB7EAA7CC9D2FE2A6915AC127E5E9 /* YYEVA-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D06D252036A56760F066477C0153D6 /* YYEVA-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DBA9500CBBA5FF6FCBBA115AE4D12152 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E7851906D7976272A721C8C4E0CE9092 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DF2B15402CE105F5A8CE48BBDCFFD5DD /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9073C3B74BC30C55B4EB5B2A596EAD72 /* MASConstraint.m */; };
 		E11536C09B69D4748F7990263969CCB6 /* YYEVADemuxMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = C774B2A6AFE56A5596818A2D47F093C1 /* YYEVADemuxMedia.m */; };
-		E57BADCB8B998898CF9A07C0C272CC99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8193349D819536E58C58A34C1B7DF545 /* Foundation.framework */; };
 		E930A5612DC6D120BE040AD17C6D1BCD /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BCCE8C6C17F326AFEDF4357C62ADAF /* MASViewAttribute.m */; };
 		EB4CEFBD9FC399DAB10B83B68DD8326A /* YYEVALoader.h in Headers */ = {isa = PBXBuildFile; fileRef = D641FE50A6223B634D8F79DB9C3F4F60 /* YYEVALoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC9B34262AED632D7EFB49804337648E /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = EDA8A3885BC33F25CB32442EB2449111 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F494928A19EFC3598DB65EA5FB034CA0 /* YYEVAVideoShareTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = F7A607BB7487BE6B14129D18B60CC400 /* YYEVAVideoShareTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6D1C960368EB1E067ABD0BFF707FC56 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 470C5CD1265270E95A8A89443C727427 /* MASConstraintMaker.m */; };
 		F929B2839BD837C5D8F2EED389ED07F5 /* NSString+YYEVAMD5.h in Headers */ = {isa = PBXBuildFile; fileRef = E443EFC28726849A21B0965919ADDF85 /* NSString+YYEVAMD5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB95C83B18DE5130CFEE99D465476434 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0629B8BF330FF9DE71ABB83307CFC1 /* Foundation.framework */; };
 		FDB1F8C91EB353BC1780F33F745A392A /* YYEVAEffectInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 345C3FEAAB4BD8FF2AE033DF7217CB7A /* YYEVAEffectInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDEFB2C836EAEF9EA6217AD68994C4AC /* Pods-YYEVA_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0448EC3C3DC1A5C0C9403C4747DFDA /* Pods-YYEVA_Example-dummy.m */; };
 /* End PBXBuildFile section */
@@ -101,10 +101,10 @@
 		02CA69FDFD4D7BB11F8E3E2E7A0B9879 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
 		047EE388CF208BD5F57049BD98558C94 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
 		071EEE0A3CE36E163E09EA7F7915F1DE /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
-		0AEAEE3A749242AB07C63918AC61ECB3 /* YYEVA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YYEVA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D5A0AB4203A1313D2D10FC168405A9A /* YYEVABundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYEVABundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D702A14A47F332B84C69BEE0A820617 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AEAEE3A749242AB07C63918AC61ECB3 /* YYEVA */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YYEVA; path = YYEVA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D5A0AB4203A1313D2D10FC168405A9A /* YYEVA-YYEVABundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "YYEVA-YYEVABundle"; path = YYEVABundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D702A14A47F332B84C69BEE0A820617 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		1FFED36A657123030ABB700256D73F15 /* Masonry */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		208C45D31AE66444539963062D5291BC /* IYYEVAVideoRenderProtol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IYYEVAVideoRenderProtol.h; sourceTree = "<group>"; };
 		215A7CA0A5E5D79F53A8C9013AAEF1E0 /* YYEVACommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YYEVACommon.h; sourceTree = "<group>"; };
 		27E12E3D2779B5C7A8301A94F715DB4C /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 		3C107B06A592D933D6FDDE30DEDC51AE /* YYEVA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYEVA-dummy.m"; sourceTree = "<group>"; };
 		3E537C1F47DA8B06DA4A71E3D14F4DE4 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
 		40177E3B5797F7AEF1AA59E14DC43A21 /* ResourceBundle-YYEVABundle-YYEVA-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-YYEVABundle-YYEVA-Info.plist"; sourceTree = "<group>"; };
-		4153976B4D5A1244215182ACB824646A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4153976B4D5A1244215182ACB824646A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		419A961AD957E23BAB6A998ED7623134 /* Masonry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.release.xcconfig; sourceTree = "<group>"; };
 		470C5CD1265270E95A8A89443C727427 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
 		4AD89987EC7EAE20D7034EEF9935E7CC /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
@@ -125,7 +125,8 @@
 		50B4CCC2A5E96BE43869ABE96A73DD41 /* NSString+YYEVAMD5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYEVAMD5.m"; sourceTree = "<group>"; };
 		55960467D1B758EC688A18A171012E78 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		59AF18626093D5542B089415B67618B7 /* YYEVAPlayer+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYEVAPlayer+WebCache.m"; sourceTree = "<group>"; };
-		5FB52B7FFA457ECC1B3C23D2FC221A25 /* Pods_YYEVA_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYEVA_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D0629B8BF330FF9DE71ABB83307CFC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5FB52B7FFA457ECC1B3C23D2FC221A25 /* Pods-YYEVA_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-YYEVA_Example"; path = Pods_YYEVA_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607937A372913475EE7EAE532760ACD4 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
 		6BD08303E46F226014D329DCE55C5DA1 /* Pods-YYEVA_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YYEVA_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6CF8069504999FB8BF5FA1529175AA74 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
@@ -135,7 +136,6 @@
 		72A95F8027E3EB86CB9AE2D7539201FE /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
 		7466E88009107BB51B839345345A6585 /* Pods-YYEVA_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YYEVA_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		80E3BF8A4F8C09365FF8DB7A07F15F8D /* Pods-YYEVA_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YYEVA_Example-frameworks.sh"; sourceTree = "<group>"; };
-		8193349D819536E58C58A34C1B7DF545 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		82EAEBFB679E2C01C98502F91BB0DADB /* YYEVALoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YYEVALoader.m; sourceTree = "<group>"; };
 		830FCBBBEC850C7C2A8C7EC95DA8F629 /* YYEVAPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YYEVAPlayer.m; sourceTree = "<group>"; };
 		837834476F3329FA118B081516D4FC28 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -146,9 +146,9 @@
 		8AAA0B49EDA5A0BBC42E07FF039B457E /* YYEVAPlayer+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYEVAPlayer+WebCache.h"; sourceTree = "<group>"; };
 		8AEEBD88282BA13360CAA867D8465C75 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
 		9073C3B74BC30C55B4EB5B2A596EAD72 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		98F4C733CF98A9D328475DD4EEAD6F2B /* YYEVAPlayer_render.metal */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.metal; path = YYEVAPlayer_render.metal; sourceTree = "<group>"; };
+		98F4C733CF98A9D328475DD4EEAD6F2B /* YYEVAPlayer_render.metal */ = {isa = PBXFileReference; includeInIndex = 1; path = YYEVAPlayer_render.metal; sourceTree = "<group>"; };
 		9A55102D3954C05CE7B1F6F6480C6EF7 /* YYEVA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YYEVA.debug.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A134BE386666B5CD15451A1B46F9DF1B /* Pods-YYEVA_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YYEVA_Example-umbrella.h"; sourceTree = "<group>"; };
 		A78D3443F105E00FC21FE5A357C8F716 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		A85AE9E36F67A1B513CB8DA940771B4F /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
@@ -166,6 +166,7 @@
 		D12E9F350C1C8076BE92719B89951AD8 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
 		D5CF6980BC246699A74F265E7184B08B /* YSVideoMetalUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YSVideoMetalUtils.m; sourceTree = "<group>"; };
 		D641FE50A6223B634D8F79DB9C3F4F60 /* YYEVALoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YYEVALoader.h; sourceTree = "<group>"; };
+		D81617CAA1204D998E4C0C7E1B3DA8BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D889264AAB80F73F1B842C3122748A9E /* YYEVAVideoEffectRender.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YYEVAVideoEffectRender.h; sourceTree = "<group>"; };
 		DC0D60829C8ACD1F96819A8484A4DA7B /* Pods-YYEVA_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YYEVA_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		DFA1012B6A8BD076CD9F09831AE37A01 /* Masonry-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Masonry-Info.plist"; sourceTree = "<group>"; };
@@ -174,13 +175,12 @@
 		E7851906D7976272A721C8C4E0CE9092 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
 		EB7CC7527FD599A1064055C060E14B43 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		EC94C0DE8341FAD39C3AF7C05A2E0662 /* Pods-YYEVA_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YYEVA_Example-Info.plist"; sourceTree = "<group>"; };
-		ECF4CA3AF5536D14B4E015504E7AEEC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		EDA8A3885BC33F25CB32442EB2449111 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
 		F01284E081180F2C91AA1F16E62D11A9 /* YYEVAAssets.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YYEVAAssets.h; sourceTree = "<group>"; };
 		F287598D192FA586BD4AECCD85B988A4 /* Masonry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.debug.xcconfig; sourceTree = "<group>"; };
 		F385F0C974A33456EC48E02C56F0F959 /* YYEVA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYEVA.h; path = YYEVA/Classes/YYEVA.h; sourceTree = "<group>"; };
 		F42128BB46581CD3E31F02F241981212 /* YYEVAPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YYEVAPlayer.h; sourceTree = "<group>"; };
-		F455CEE90BE9D589879796D1ED3E2B60 /* YYEVA.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = YYEVA.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		F455CEE90BE9D589879796D1ED3E2B60 /* YYEVA.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YYEVA.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F7A607BB7487BE6B14129D18B60CC400 /* YYEVAVideoShareTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YYEVAVideoShareTypes.h; sourceTree = "<group>"; };
 		F8BE7883EC5EDC776CF3845C40250F72 /* YYEVA-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYEVA-prefix.pch"; sourceTree = "<group>"; };
 		F9CE1B88552129BDF463D354BF422E57 /* YYEVA-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YYEVA-Info.plist"; sourceTree = "<group>"; };
@@ -191,8 +191,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D663837F4347AF58660EE6F7FD426ECE /* Foundation.framework in Frameworks */,
-				4571A0EA37DC84F39E3830D38A1531AB /* UIKit.framework in Frameworks */,
+				FB95C83B18DE5130CFEE99D465476434 /* Foundation.framework in Frameworks */,
+				A6AA9E1B93FB36290486842AAB105987 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D329DC26B040AD609BBFDDA9EF179286 /* Foundation.framework in Frameworks */,
+				D9DA94665D7C3E8F90644B2C43FFF1BF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E57BADCB8B998898CF9A07C0C272CC99 /* Foundation.framework in Frameworks */,
+				C41CC7916B26A20092D59FD090EDB647 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +269,7 @@
 				342C4D9B5E1E36390E7AF01E35444998 /* ViewController+MASAdditions.m */,
 				C84A449C2DE4F91F0620A5147DD42E0F /* Support Files */,
 			);
+			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -291,7 +292,7 @@
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1DE6440B6853131A80C53DDA34375AAB /* iOS */,
+				581D157A7B3B06F693AB3AA19A9AB32E /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -299,10 +300,10 @@
 		1AED556C9E004359D12D0F82CED1CFDB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1FFED36A657123030ABB700256D73F15 /* Masonry.framework */,
-				5FB52B7FFA457ECC1B3C23D2FC221A25 /* Pods_YYEVA_Example.framework */,
-				0AEAEE3A749242AB07C63918AC61ECB3 /* YYEVA.framework */,
-				0D5A0AB4203A1313D2D10FC168405A9A /* YYEVABundle.bundle */,
+				1FFED36A657123030ABB700256D73F15 /* Masonry */,
+				5FB52B7FFA457ECC1B3C23D2FC221A25 /* Pods-YYEVA_Example */,
+				0AEAEE3A749242AB07C63918AC61ECB3 /* YYEVA */,
+				0D5A0AB4203A1313D2D10FC168405A9A /* YYEVA-YYEVABundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,11 +323,11 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		1DE6440B6853131A80C53DDA34375AAB /* iOS */ = {
+		581D157A7B3B06F693AB3AA19A9AB32E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8193349D819536E58C58A34C1B7DF545 /* Foundation.framework */,
-				ECF4CA3AF5536D14B4E015504E7AEEC0 /* UIKit.framework */,
+				5D0629B8BF330FF9DE71ABB83307CFC1 /* Foundation.framework */,
+				D81617CAA1204D998E4C0C7E1B3DA8BF /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -443,6 +444,7 @@
 			children = (
 				215A7CA0A5E5D79F53A8C9013AAEF1E0 /* YYEVACommon.h */,
 			);
+			name = common;
 			path = common;
 			sourceTree = "<group>";
 		};
@@ -533,7 +535,7 @@
 			);
 			name = Masonry;
 			productName = Masonry;
-			productReference = 1FFED36A657123030ABB700256D73F15 /* Masonry.framework */;
+			productReference = 1FFED36A657123030ABB700256D73F15 /* Masonry */;
 			productType = "com.apple.product-type.framework";
 		};
 		8F733E020EC85D81923E429FBF23A8DE /* YYEVA-YYEVABundle */ = {
@@ -550,7 +552,7 @@
 			);
 			name = "YYEVA-YYEVABundle";
 			productName = YYEVABundle;
-			productReference = 0D5A0AB4203A1313D2D10FC168405A9A /* YYEVABundle.bundle */;
+			productReference = 0D5A0AB4203A1313D2D10FC168405A9A /* YYEVA-YYEVABundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		9824471EC3DA06F5050FDB161C6932EF /* Pods-YYEVA_Example */ = {
@@ -570,7 +572,7 @@
 			);
 			name = "Pods-YYEVA_Example";
 			productName = Pods_YYEVA_Example;
-			productReference = 5FB52B7FFA457ECC1B3C23D2FC221A25 /* Pods_YYEVA_Example.framework */;
+			productReference = 5FB52B7FFA457ECC1B3C23D2FC221A25 /* Pods-YYEVA_Example */;
 			productType = "com.apple.product-type.framework";
 		};
 		EE46A1DF56DC6AA77AB1925AF02F1396 /* YYEVA */ = {
@@ -589,7 +591,7 @@
 			);
 			name = YYEVA;
 			productName = YYEVA;
-			productReference = 0AEAEE3A749242AB07C63918AC61ECB3 /* YYEVA.framework */;
+			productReference = 0AEAEE3A749242AB07C63918AC61ECB3 /* YYEVA */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -610,6 +612,8 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 100;
 			productRefGroup = 1AED556C9E004359D12D0F82CED1CFDB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -642,7 +646,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B84017D2EC4451600CA50CC65DF76876 /* YYEVABundle.bundle in Resources */,
+				B84017D2EC4451600CA50CC65DF76876 /* YYEVA-YYEVABundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,7 +737,132 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+		2A521577A6904C0FEA98E524D2A854B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF45D870FCC7522DB4A85599B3DFB2A5 /* YYEVA.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/YYEVA";
+				IBSC_MODULE = YYEVA;
+				INFOPLIST_FILE = "Target Support Files/YYEVA/ResourceBundle-YYEVABundle-YYEVA-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				PRODUCT_NAME = YYEVABundle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		2FA069F22526EC50AA63AF288A5A39F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F287598D192FA586BD4AECCD85B988A4 /* Masonry.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		41A9057B8AE7046A5B0686FE06A389CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 887FF1697CFA0A89A90BB0ED86D80115 /* Pods-YYEVA_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-YYEVA_Example/Pods-YYEVA_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YYEVA_Example/Pods-YYEVA_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6C94F8B09F2FBE018822A421977C7532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BD08303E46F226014D329DCE55C5DA1 /* Pods-YYEVA_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-YYEVA_Example/Pods-YYEVA_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YYEVA_Example/Pods-YYEVA_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -786,7 +915,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -799,231 +928,7 @@
 			};
 			name = Debug;
 		};
-		2A521577A6904C0FEA98E524D2A854B7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF45D870FCC7522DB4A85599B3DFB2A5 /* YYEVA.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/YYEVA";
-				IBSC_MODULE = YYEVA;
-				INFOPLIST_FILE = "Target Support Files/YYEVA/ResourceBundle-YYEVABundle-YYEVA-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = YYEVABundle;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		2E42A3F55E1F048578235701239B3503 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 419A961AD957E23BAB6A998ED7623134 /* Masonry.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
-				PRODUCT_MODULE_NAME = Masonry;
-				PRODUCT_NAME = Masonry;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		2ED64286F509DD67BB756CC8D458CA27 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF45D870FCC7522DB4A85599B3DFB2A5 /* YYEVA.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/YYEVA/YYEVA-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/YYEVA/YYEVA-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/YYEVA/YYEVA.modulemap";
-				PRODUCT_MODULE_NAME = YYEVA;
-				PRODUCT_NAME = YYEVA;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		37161750DD2BD1EFEE6B1E31CAE2A17D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F287598D192FA586BD4AECCD85B988A4 /* Masonry.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
-				PRODUCT_MODULE_NAME = Masonry;
-				PRODUCT_NAME = Masonry;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		72A4DC7223A13C2C5C922D7B7F7BEB64 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 887FF1697CFA0A89A90BB0ED86D80115 /* Pods-YYEVA_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-YYEVA_Example/Pods-YYEVA_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-YYEVA_Example/Pods-YYEVA_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		77F1674940EDE9F292D77E290D2A3F1D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A55102D3954C05CE7B1F6F6480C6EF7 /* YYEVA.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/YYEVA/YYEVA-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/YYEVA/YYEVA-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/YYEVA/YYEVA.modulemap";
-				PRODUCT_MODULE_NAME = YYEVA;
-				PRODUCT_NAME = YYEVA;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C56A1CB0218070DDB73E7025F9029A0A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6BD08303E46F226014D329DCE55C5DA1 /* Pods-YYEVA_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-YYEVA_Example/Pods-YYEVA_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-YYEVA_Example/Pods-YYEVA_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1073,14 +978,122 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		96B7B935BE4E74C36B141EB3EA8A0CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF45D870FCC7522DB4A85599B3DFB2A5 /* YYEVA.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/YYEVA/YYEVA-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/YYEVA/YYEVA-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YYEVA/YYEVA.modulemap";
+				PRODUCT_MODULE_NAME = YYEVA;
+				PRODUCT_NAME = YYEVA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9BA6B1305EBEE9041A65F88B77A94050 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A55102D3954C05CE7B1F6F6480C6EF7 /* YYEVA.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/YYEVA/YYEVA-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/YYEVA/YYEVA-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YYEVA/YYEVA.modulemap";
+				PRODUCT_MODULE_NAME = YYEVA;
+				PRODUCT_NAME = YYEVA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CD579C0995F39A1DE1A8FC355BC176BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 419A961AD957E23BAB6A998ED7623134 /* Masonry.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1092,7 +1105,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/YYEVA";
 				IBSC_MODULE = YYEVA;
 				INFOPLIST_FILE = "Target Support Files/YYEVA/ResourceBundle-YYEVABundle-YYEVA-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				PRODUCT_NAME = YYEVABundle;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1116,8 +1129,8 @@
 		34B7BCDBCD1ED741E5EDDFF11392D078 /* Build configuration list for PBXNativeTarget "YYEVA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				77F1674940EDE9F292D77E290D2A3F1D /* Debug */,
-				2ED64286F509DD67BB756CC8D458CA27 /* Release */,
+				9BA6B1305EBEE9041A65F88B77A94050 /* Debug */,
+				96B7B935BE4E74C36B141EB3EA8A0CC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1125,8 +1138,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
-				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1134,8 +1147,8 @@
 		AAA1F8799DB68036C3BE983C05FAA2C7 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37161750DD2BD1EFEE6B1E31CAE2A17D /* Debug */,
-				2E42A3F55E1F048578235701239B3503 /* Release */,
+				2FA069F22526EC50AA63AF288A5A39F0 /* Debug */,
+				CD579C0995F39A1DE1A8FC355BC176BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1143,8 +1156,8 @@
 		DF53D2F835A6474BD3D9196D8CE2ABBF /* Build configuration list for PBXNativeTarget "Pods-YYEVA_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				72A4DC7223A13C2C5C922D7B7F7BEB64 /* Debug */,
-				C56A1CB0218070DDB73E7025F9029A0A /* Release */,
+				41A9057B8AE7046A5B0686FE06A389CD /* Debug */,
+				6C94F8B09F2FBE018822A421977C7532 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

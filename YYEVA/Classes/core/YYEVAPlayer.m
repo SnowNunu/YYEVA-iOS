@@ -10,6 +10,7 @@
 #import "YYEVAVideoAlphaRender.h"
 #import "YYEVAVideoEffectRender.h"
 #import "YYEVALoader.h"
+#import "YYEVAEffectInfo.h"
 
 @interface NSTimer (WeakTimer)
 + (NSTimer *)scheduledWeakTimerWithTimeInterval:(NSTimeInterval)interval target:(id)aTarget selector:(SEL)aSelector userInfo:(id)userInfo repeats:(BOOL)repeats;
@@ -52,8 +53,6 @@
 @property (nonatomic, strong) MTKView *mtkView;
 @property (nonatomic, strong) id<IYYEVAVideoRenderProtol> videoRender;
 @property (nonatomic, copy)   NSString *fileUrl;
-@property (nonatomic, strong) NSMutableDictionary *imgUrlKeys;
-@property (nonatomic, strong) NSMutableDictionary *textKeys;
 @property (nonatomic, copy)   NSString *bgImageUrl;
 @property (nonatomic, assign) UIViewContentMode bgContentMode;
 @property (nonatomic, assign) NSInteger repeatCount;
