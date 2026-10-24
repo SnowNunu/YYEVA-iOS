@@ -59,6 +59,9 @@ NS_ASSUME_NONNULL_BEGIN
 // true 表示停在最后一帧
 @property (nonatomic, assign) BOOL setLastFrame;
 
+@property (nonatomic, strong) NSMutableDictionary *imgUrlKeys;
+@property (nonatomic, strong) NSMutableDictionary *textKeys;
+
 // 禁用CVMetalTextureCache，内存下降明显，CPU略微上涨，可根据业务灵活使用。默认NO
 @property (nonatomic, assign) BOOL disalbleMetalCache;
 

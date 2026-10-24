@@ -64,8 +64,30 @@ YYEVAPlayer *player = [[YYEVAPlayer alloc] init];
 ```
 
 其中以下接口是给MP4动态插入,业务文字或图片的接口
-+ setImageUrl:forKey    
++ setImageUrl:forKey（支持传入本地文件路径或远程 HTTP/HTTPS 图片 URL，底层自动提供磁盘缓存与并发去重）
++ setImage:forKey（支持直接传入 UIImage）
 + setText:forKey 
+
+### 播放网络视频与动态元素预加载
+```objc
+#import "YYEVAPlayer+WebCache.h"
+
+// 1. 设置网络头像或元素
+[player setImageUrl:@"https://example.com/avatar1.png" forKey:@"from_avatar"];
+[player setImageUrl:@"https://example.com/avatar2.png" forKey:@"to_avatar"];
+
+// 2. 播放远程视频（底层将并发预加载视频与所有远程元素，确保首帧完整渲染）
+[player playWithUrl:@"https://example.com/effect.mp4" repeatCount:1 completion:^(BOOL isFinish) {
+    NSLog(@"播放完成: %d", isFinish);
+}];
+```
+
+## 更新日志 (Release Notes)
+
+### 1.1.38
+- **feat(remote-image)**: `setImageUrl:forKey:` 支持远程 HTTP/HTTPS 图片 URL，底层自动管理本地磁盘缓存与网络并发去重。
+- **feat(webcache)**: `playWithUrl:repeatCount:completion:` 新增在线视频与网络图片并发预载机制，彻底解决网络延迟导致的首帧头像闪烁与缺失问题。
+- **feat(render)**: 支持在播放过程中动态刷新替换已下载完成的图像纹理。
  
 ## QQ交流群
 ![qqgroup](https://github.com/yylive/YYEVA/blob/main/img/qqgroup.png)

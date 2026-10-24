@@ -9,6 +9,7 @@
 #import "IYYEVAVideoRenderProtol.h"
 #import "YYEVAVideoAlphaRender.h"
 #import "YYEVAVideoEffectRender.h"
+#import "YYEVALoader.h"
 
 @interface NSTimer (WeakTimer)
 + (NSTimer *)scheduledWeakTimerWithTimeInterval:(NSTimeInterval)interval target:(id)aTarget selector:(SEL)aSelector userInfo:(id)userInfo repeats:(BOOL)repeats;
@@ -105,8 +106,27 @@
 {
     if (imgUrl.length > 0 && key.length > 0) {
         [self.imgUrlKeys setObject:imgUrl forKey:key];
+        
+        if ([imgUrl hasPrefix:@"http://"] || [imgUrl hasPrefix:@"https://"]) {
+            __weak typeof(self) weakSelf = self;
+            [[YYEVALoader sharedLoader] loadImageWithUrl:imgUrl completion:^(UIImage * _Nullable image, NSString * _Nullable filePath, NSError * _Nullable error) {
+                __strong typeof(weakSelf) strongSelf = weakSelf;
+                if (!strongSelf || !image) return;
+                
+                [strongSelf.imgUrlKeys setObject:image forKey:key];
+                
+                if (strongSelf.assets && strongSelf.assets.effectInfo) {
+                    for (YYEVAEffectSource *source in strongSelf.assets.effectInfo.srcs) {
+                        if ([source.effect_tag isEqualToString:key] && source.type == YYEVAEffectSourceTypeImage) {
+                            source.sourceImage = image;
+                            source.texture = nil;
+                            break;
+                        }
+                    }
+                }
+            }];
+        }
     }
-    
 }
 
 - (void)setImage:(UIImage *)image forKey:(NSString *)key

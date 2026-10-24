@@ -155,6 +155,120 @@
     [task resume];
 }
 
+- (void)loadImageWithUrl:(NSString *)urlStr completion:(YYEVALoaderImageCompletionBlock)completion {
+    if (!urlStr || urlStr.length == 0) {
+        if (completion) completion(nil, nil, [NSError errorWithDomain:@"YYEVALoader" code:-1 userInfo:@{NSLocalizedDescriptionKey:@"URL为空"}]);
+        return;
+    }
+    
+    // 如果传入的本身就是本地文件路径
+    if (![urlStr hasPrefix:@"http://"] && ![urlStr hasPrefix:@"https://"]) {
+        UIImage *localImage = [UIImage imageWithContentsOfFile:urlStr];
+        if (completion) {
+            completion(localImage, urlStr, localImage ? nil : [NSError errorWithDomain:@"YYEVALoader" code:-2 userInfo:@{NSLocalizedDescriptionKey:@"本地图片不存在"}]);
+        }
+        return;
+    }
+    
+    NSString *key = [urlStr yyeva_md5String];
+    NSString *fileName = [NSString stringWithFormat:@"img_%@", key];
+    NSString *filePath = [self.cacheDirectory stringByAppendingPathComponent:fileName];
+    
+    // 1. 查缓存
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        UIImage *cachedImage = [UIImage imageWithContentsOfFile:filePath];
+        if (cachedImage) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (completion) completion(cachedImage, filePath, nil);
+            });
+            return;
+        } else {
+            [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+        }
+    }
+    
+    // 2. 核心并发控制：使用 @synchronized 锁住字典
+    NSString *dictKey = [NSString stringWithFormat:@"img_%@", key];
+    @synchronized (self.callbacksDictionary) {
+        NSMutableArray *callbacks = self.callbacksDictionary[dictKey];
+        if (callbacks) {
+            if (completion) {
+                [callbacks addObject:[completion copy]];
+            }
+            return;
+        } else {
+            callbacks = [NSMutableArray array];
+            if (completion) {
+                [callbacks addObject:[completion copy]];
+            }
+            self.callbacksDictionary[dictKey] = callbacks;
+        }
+    }
+    
+    // 3. 发起下载
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    __weak typeof(self) weakSelf = self;
+    NSURLSessionDownloadTask *task = [self.session downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        NSString *finalPath = nil;
+        NSError *finalError = error;
+        UIImage *finalImage = nil;
+        
+        if (!error && location) {
+            NSError *moveError = nil;
+            NSURL *destinationURL = [NSURL fileURLWithPath:filePath];
+            
+            if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+                [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+            }
+            
+            [[NSFileManager defaultManager] moveItemAtURL:location toURL:destinationURL error:&moveError];
+            if (!moveError) {
+                finalPath = filePath;
+                finalImage = [UIImage imageWithContentsOfFile:filePath];
+            } else {
+                finalError = moveError;
+            }
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSMutableArray *callbacks = nil;
+            @synchronized (strongSelf.callbacksDictionary) {
+                callbacks = strongSelf.callbacksDictionary[dictKey];
+                [strongSelf.callbacksDictionary removeObjectForKey:dictKey];
+                [strongSelf.downloadTasks removeObjectForKey:dictKey];
+            }
+            
+            for (YYEVALoaderImageCompletionBlock block in callbacks) {
+                block(finalImage, finalPath, finalError);
+            }
+        });
+    }];
+    
+    @synchronized (self.downloadTasks) {
+        self.downloadTasks[dictKey] = task;
+    }
+    
+    [task resume];
+}
+
+- (UIImage *)cachedImageForUrl:(NSString *)urlStr {
+    if (!urlStr || urlStr.length == 0) return nil;
+    if (![urlStr hasPrefix:@"http://"] && ![urlStr hasPrefix:@"https://"]) {
+        return [UIImage imageWithContentsOfFile:urlStr];
+    }
+    NSString *key = [urlStr yyeva_md5String];
+    NSString *fileName = [NSString stringWithFormat:@"img_%@", key];
+    NSString *filePath = [self.cacheDirectory stringByAppendingPathComponent:fileName];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        return [UIImage imageWithContentsOfFile:filePath];
+    }
+    return nil;
+}
+
 - (void)clearCache {
     [[NSFileManager defaultManager] removeItemAtPath:self.cacheDirectory error:nil];
     [[NSFileManager defaultManager] createDirectoryAtPath:self.cacheDirectory withIntermediateDirectories:YES attributes:nil error:nil];

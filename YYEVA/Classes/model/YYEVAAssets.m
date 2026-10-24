@@ -11,6 +11,7 @@
 #import "YSVideoMetalUtils.h"
 #import <AVFoundation/AVFoundation.h>
 #import "YYEVARegionChecker.h"
+#import "YYEVALoader.h"
 
 #define kSampleBufferQueueMaxCapacity 3
 
@@ -76,7 +77,22 @@
                 if ([content isKindOfClass:UIImage.class]) {
                     source.sourceImage = content;
                 } else if ([content isKindOfClass:NSString.class]) {
-                    source.sourceImage = [UIImage imageWithContentsOfFile:content];
+                    NSString *urlOrPath = (NSString *)content;
+                    if ([urlOrPath hasPrefix:@"http://"] || [urlOrPath hasPrefix:@"https://"]) {
+                        UIImage *cached = [[YYEVALoader sharedLoader] cachedImageForUrl:urlOrPath];
+                        if (cached) {
+                            source.sourceImage = cached;
+                        } else {
+                            [[YYEVALoader sharedLoader] loadImageWithUrl:urlOrPath completion:^(UIImage * _Nullable image, NSString * _Nullable filePath, NSError * _Nullable error) {
+                                if (image) {
+                                    source.sourceImage = image;
+                                    source.texture = nil;
+                                }
+                            }];
+                        }
+                    } else {
+                        source.sourceImage = [UIImage imageWithContentsOfFile:content];
+                    }
                 }
             } else if (source.type == YYEVAEffectSourceTypeText) {
                 
