@@ -67,6 +67,8 @@ YYEVAPlayer *player = [[YYEVAPlayer alloc] init];
 + setImageUrl:forKey（支持传入本地文件路径或远程 HTTP/HTTPS 图片 URL，底层自动提供磁盘缓存与并发去重）
 + setImage:forKey（支持直接传入 UIImage）
 + setText:forKey 
++ setText:forKey:weight:（支持自定义字重，同时强制保证单行绘制与尾部截断）
++ setText:forKey:textAlign:weight:（支持自定义对齐方式与字重）
 
 ### 播放网络视频与动态元素预加载
 ```objc
@@ -83,6 +85,11 @@ YYEVAPlayer *player = [[YYEVAPlayer alloc] init];
 ```
 
 ## 更新日志 (Release Notes)
+
+### 1.1.39
+- **feat(text-weight)**: 新增 `setText:forKey:weight:` 与 `setText:forKey:textAlign:weight:`，支持指定自定义文本字重（如 Regular, Medium, Semibold, Bold 等），Swift 自动适配 `UIFont.Weight`。
+- **fix(text-singleline)**: 将单行文本绘制高度严格约束为单行行高 `lineHeight` 并开启 `NSStringDrawingTruncatesLastVisibleLine`，彻底解决素材占位高度过大时长文本被异常折行的问题。
+- **compat**: 完美向后兼容原 `setText:` 接口（未指定字重时默认采用 `UIFontWeightHeavy` 兜底）。
 
 ### 1.1.38
 - **feat(remote-image)**: `setImageUrl:forKey:` 支持远程 HTTP/HTTPS 图片 URL，底层自动管理本地磁盘缓存与网络并发去重。

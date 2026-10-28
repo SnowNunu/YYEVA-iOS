@@ -210,6 +210,16 @@ void mask_textureCoordinateFromRect(CGRect rect,CGSize containerSize,float coord
                       rectSize:(CGSize)rectSize
                          align:(NSTextAlignment)align
 {
+    return [self imageWithText:text textColor:textColor fontSize:fontSize rectSize:rectSize align:align weight:UIFontWeightHeavy];
+}
+
++ (UIImage *)imageWithText:(NSString *)text
+                     textColor:(UIColor *)textColor
+                      fontSize:(float)fontSize
+                      rectSize:(CGSize)rectSize
+                         align:(NSTextAlignment)align
+                        weight:(UIFontWeight)weight
+{
     CheckReturnNil((text.length != 0));
     
     if (!textColor) {
@@ -217,14 +227,16 @@ void mask_textureCoordinateFromRect(CGRect rect,CGSize containerSize,float coord
     }
     CGRect rect = (CGRect){CGPointMake(0.0,0.0),rectSize};
     CGSize textSize = CGSizeZero;
-    UIFont *font = [self calculatorFontWithText:text rect:rect designedSize:fontSize fontName:nil bold:bold textSize:&textSize needFitWidth:NO];
+    UIFont *font = [self calculatorFontWithText:text rect:rect designedSize:fontSize fontName:nil weight:weight textSize:&textSize needFitWidth:NO];
     NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
     paragraphStyle.alignment = align;
     paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
     NSDictionary *attr = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:paragraphStyle, NSForegroundColorAttributeName:textColor,NSBackgroundColorAttributeName:[UIColor clearColor]};
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
-    rect.origin.y = (rect.size.height - font.lineHeight)/2.0;
-    [text drawWithRect:rect options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil];
+    CGFloat lineHeight = ceil(font.lineHeight);
+    rect.origin.y = (rect.size.height - lineHeight)/2.0;
+    rect.size.height = lineHeight;
+    [text drawWithRect:rect options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine attributes:attr context:nil];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     if (!image) {
@@ -233,28 +245,16 @@ void mask_textureCoordinateFromRect(CGRect rect,CGSize containerSize,float coord
     return image;
 }
  
-//根据指定的字符内容和容器大小计算合适的字体
+//根据指定的字符内容和容器大小计算合适的字体（支持指定字重）
 + (UIFont *)calculatorFontWithText:(NSString *)text
                               rect:(CGRect)fitFrame
                       designedSize:(CGFloat)designedFontSize
                           fontName:(NSString *)fontName
-                              bold:(BOOL)isBold
+                            weight:(UIFontWeight)weight
                           textSize:(CGSize *)textSize
                       needFitWidth:(BOOL)needFitWidth
 {
-    UIFont *defaultFont = [UIFont systemFontOfSize:designedFontSize weight:UIFontWeightHeavy];
-    if ([defaultFont.fontName isEqualToString:@".SFUI-Black"]) {
-        defaultFont = [UIFont systemFontOfSize:designedFontSize weight:UIFontWeightSemibold];
-        if (![defaultFont.fontName isEqualToString:@".SFUI-Heavy"]) {
-            defaultFont = nil;
-            NSLog(@"not heavy");
-        }
-    }
-
-    UIFont *designedFont = isBold ? [UIFont boldSystemFontOfSize:designedFontSize] : [UIFont systemFontOfSize:designedFontSize];
-    if (defaultFont != nil) {
-        designedFont = defaultFont;
-    }
+    UIFont *designedFont = [UIFont systemFontOfSize:designedFontSize weight:weight];
 
     if (fontName && fontName.length) {
         UIFont *tempFont = [UIFont fontWithName:fontName size:designedFontSize];
@@ -271,6 +271,19 @@ void mask_textureCoordinateFromRect(CGRect rect,CGSize containerSize,float coord
   
     *textSize = stringSize;
     return designedFont;
+}
+
+//根据指定的字符内容和容器大小计算合适的字体
++ (UIFont *)calculatorFontWithText:(NSString *)text
+                              rect:(CGRect)fitFrame
+                      designedSize:(CGFloat)designedFontSize
+                          fontName:(NSString *)fontName
+                              bold:(BOOL)isBold
+                          textSize:(CGSize *)textSize
+                      needFitWidth:(BOOL)needFitWidth
+{
+    UIFontWeight weight = isBold ? UIFontWeightBold : UIFontWeightHeavy;
+    return [self calculatorFontWithText:text rect:fitFrame designedSize:designedFontSize fontName:fontName weight:weight textSize:textSize needFitWidth:needFitWidth];
 }
  
 

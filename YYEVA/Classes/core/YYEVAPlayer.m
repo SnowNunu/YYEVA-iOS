@@ -101,6 +101,18 @@
     [self.textKeys setObject:@{@"content":text,@"align":@(textAlign)} forKey:key];
 }
 
+- (void)setText:(NSString *)text forKey:(NSString *)key weight:(UIFontWeight)weight
+{
+    if (text.length <= 0) return;
+    [self.textKeys setObject:@{@"content":text,@"weight":@(weight)} forKey:key];
+}
+
+- (void)setText:(NSString *)text forKey:(NSString *)key textAlign:(NSTextAlignment)textAlign weight:(UIFontWeight)weight
+{
+    if (text.length <= 0) return;
+    [self.textKeys setObject:@{@"content":text,@"align":@(textAlign),@"weight":@(weight)} forKey:key];
+}
+
 - (void)setImageUrl:(NSString *)imgUrl forKey:(NSString *)key
 {
     if (imgUrl.length > 0 && key.length > 0) {

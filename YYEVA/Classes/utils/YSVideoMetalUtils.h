@@ -32,7 +32,14 @@ extern "C" {
                      textColor:(UIColor *)textColor
                       fontSize:(float)fontSize
                       rectSize:(CGSize)rectSize
-                     align:(NSTextAlignment)align;
+                         align:(NSTextAlignment)align;
+
++ (UIImage *)imageWithText:(NSString *)text
+                     textColor:(UIColor *)textColor
+                      fontSize:(float)fontSize
+                      rectSize:(CGSize)rectSize
+                         align:(NSTextAlignment)align
+                        weight:(UIFontWeight)weight;
 
 + (id<MTLTexture>)getTextureFromPixelBuffer:(CVPixelBufferRef)pixelBufferRef
                                   planeIndex:(size_t)planeIndex

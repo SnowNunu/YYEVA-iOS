@@ -117,11 +117,16 @@
                         color = [UIColor colorWithRed:r green:g blue:b alpha:1.0f];
                     }
                     float fontSize = source.fontSize;
+                    UIFontWeight weight = UIFontWeightHeavy;
+                    if ([textDict objectForKey:@"weight"] != nil) {
+                        weight = [[textDict objectForKey:@"weight"] doubleValue];
+                    }
                     source.sourceImage = [YSVideoMetalUtils imageWithText:text
                                                                 textColor:color
                                                                  fontSize:fontSize
                                                                  rectSize:CGSizeMake(source.width, source.height)
-                                                                    align:alignment];
+                                                                    align:alignment
+                                                                   weight:weight];
                 }
             }
         }
