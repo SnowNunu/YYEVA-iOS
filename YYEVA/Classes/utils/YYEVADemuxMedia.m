@@ -72,14 +72,20 @@
 
 - (NSDictionary *)parseWithBase64:(NSString *)stringBase64
 {
+    if (!stringBase64 || stringBase64.length == 0) return nil;
     NSData *data = [[NSData alloc] initWithBase64EncodedString:stringBase64 options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    if (!data) return nil;
     
     NSData *zlibData = [self zlibInflate:data];
+    if (!zlibData) return nil;
     
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:zlibData options:kNilOptions error:nil];
+    NSError *error = nil;
+    id json = [NSJSONSerialization JSONObjectWithData:zlibData options:kNilOptions error:&error];
+    if (error || ![json isKindOfClass:[NSDictionary class]]) {
+        return nil;
+    }
      
-    return json;
-  
+    return (NSDictionary *)json;
 }
 
 - (NSString *)findString:(NSString *)match withString:(NSString *)bufStr isStart:(BOOL)isStart

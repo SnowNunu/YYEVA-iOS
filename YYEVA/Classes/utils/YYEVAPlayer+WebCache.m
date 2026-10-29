@@ -109,7 +109,9 @@ static char kYYEVACurrentURLKey;
         
         // 将预加载好的图片更新到 imgUrlKeys
         [downloadedImages enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, UIImage * _Nonnull image, BOOL * _Nonnull stop) {
-            [strongSelf.imgUrlKeys setObject:image forKey:key];
+            if (key && image) {
+                [strongSelf.imgUrlKeys setObject:image forKey:key];
+            }
         }];
         
         if (videoFilePath && !videoError) {

@@ -19,7 +19,7 @@ static NSString *kYYEVAJsonFrameDatasKey = @"datas";
 
 CGRect getFrame(NSArray *arry)
 {
-    if (arry.count == 4) {
+    if ([arry isKindOfClass:[NSArray class]] && arry.count == 4) {
         return CGRectMake([arry[0] floatValue], [arry[1] floatValue], [arry[2] floatValue], [arry[3] floatValue]);
     }
     return CGRectZero;
@@ -184,21 +184,31 @@ CGRect getFrame(NSArray *arry)
 
 - (void)setupWithDescript:(NSDictionary *)descript
 {
+    if (!descript || ![descript isKindOfClass:[NSDictionary class]]) {
+        return;
+    }
     _videoWidth = [[descript objectForKey:@"width"] floatValue];
     _videoHeight = [[descript objectForKey:@"height"] floatValue];
     _isEffect = [[descript objectForKey:@"isEffect"] intValue];
-    _plugin_version = [descript objectForKey:@"version"];
+    id versionObj = [descript objectForKey:@"version"];
+    if ([versionObj isKindOfClass:[NSString class]]) {
+        _plugin_version = versionObj;
+    }
     _rgbFrame = getFrame([descript objectForKey:@"rgbFrame"]);
     _alphaFrame = getFrame([descript objectForKey:@"alphaFrame"]);
 }
 
 - (void)setupWithEffects:(NSArray *)effects
 {
-    if (effects.count > 0) {
+    if ([effects isKindOfClass:[NSArray class]] && effects.count > 0) {
         NSMutableArray *srcs = [NSMutableArray array];
-        [effects enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            YYEVAEffectSource *source = [YYEVAEffectSource effectSourceWithDictionary:obj];
-            [srcs addObject:source];
+        [effects enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj isKindOfClass:[NSDictionary class]]) {
+                YYEVAEffectSource *source = [YYEVAEffectSource effectSourceWithDictionary:(NSDictionary *)obj];
+                if (source) {
+                    [srcs addObject:source];
+                }
+            }
         }];
         _srcs = [srcs copy];
     }
@@ -206,22 +216,27 @@ CGRect getFrame(NSArray *arry)
 
 - (void)setupWithFrameDatas:(NSArray *)frameDatas
 {
-    if (frameDatas.count > 0) {
-        
-         NSMutableDictionary<NSNumber * ,NSArray <YYEVAEffectFrame *>*> *frames = [NSMutableDictionary dictionary];
-         
-        [frameDatas enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            NSInteger frameIndex = [[obj objectForKey:@"frameIndex"] integerValue];
-            NSArray *framesArry = [obj objectForKey:@"data"];
-            NSMutableArray<YYEVAEffectFrame *> *curFrames = [NSMutableArray array];
-            [framesArry enumerateObjectsUsingBlock:^(NSDictionary *frameObj, NSUInteger frameDict, BOOL * _Nonnull stop) {
-                if (frameObj) {
-                    YYEVAEffectFrame *frame = [YYEVAEffectFrame effectFrameWithDictionary:frameObj];
-                    [curFrames addObject:frame];
+    if ([frameDatas isKindOfClass:[NSArray class]] && frameDatas.count > 0) {
+        NSMutableDictionary<NSNumber *, NSArray <YYEVAEffectFrame *>*> *frames = [NSMutableDictionary dictionary];
+        [frameDatas enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj isKindOfClass:[NSDictionary class]]) {
+                NSInteger frameIndex = [[obj objectForKey:@"frameIndex"] integerValue];
+                NSArray *framesArry = [obj objectForKey:@"data"];
+                if ([framesArry isKindOfClass:[NSArray class]]) {
+                    NSMutableArray<YYEVAEffectFrame *> *curFrames = [NSMutableArray array];
+                    [framesArry enumerateObjectsUsingBlock:^(id frameObj, NSUInteger frameDict, BOOL * _Nonnull stop) {
+                        if ([frameObj isKindOfClass:[NSDictionary class]]) {
+                            YYEVAEffectFrame *frame = [YYEVAEffectFrame effectFrameWithDictionary:(NSDictionary *)frameObj];
+                            if (frame) {
+                                [curFrames addObject:frame];
+                            }
+                        }
+                    }];
+                    if (curFrames) {
+                        [frames setObject:curFrames forKey:@(frameIndex)];
+                    }
                 }
-            }];
-            [frames setObject:curFrames forKey:@(frameIndex)];
-            
+            }
         }];
         _frames = [frames copy];
     }

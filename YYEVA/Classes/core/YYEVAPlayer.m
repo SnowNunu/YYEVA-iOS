@@ -85,31 +85,31 @@
  
 - (void)setText:(NSString *)text forKey:(NSString *)key
 {
-    if (text.length <= 0) return;
+    if (text.length <= 0 || key.length <= 0) return;
     [self.textKeys setObject:@{@"content":text} forKey:key];
 }
 
 - (void)setAttrText:(NSAttributedString *)attrText forKey:(NSString *)key
 {
-    if (attrText == nil) return;
+    if (attrText == nil || key.length <= 0) return;
     [self.textKeys setObject:@{@"attrText": [attrText copy]} forKey:key];
 }
 
 - (void)setText:(NSString *)text forKey:(NSString *)key textAlign:(NSTextAlignment)textAlign
 {
-    if (text.length <= 0) return;
+    if (text.length <= 0 || key.length <= 0) return;
     [self.textKeys setObject:@{@"content":text,@"align":@(textAlign)} forKey:key];
 }
 
 - (void)setText:(NSString *)text forKey:(NSString *)key weight:(UIFontWeight)weight
 {
-    if (text.length <= 0) return;
+    if (text.length <= 0 || key.length <= 0) return;
     [self.textKeys setObject:@{@"content":text,@"weight":@(weight)} forKey:key];
 }
 
 - (void)setText:(NSString *)text forKey:(NSString *)key textAlign:(NSTextAlignment)textAlign weight:(UIFontWeight)weight
 {
-    if (text.length <= 0) return;
+    if (text.length <= 0 || key.length <= 0) return;
     [self.textKeys setObject:@{@"content":text,@"align":@(textAlign),@"weight":@(weight)} forKey:key];
 }
 

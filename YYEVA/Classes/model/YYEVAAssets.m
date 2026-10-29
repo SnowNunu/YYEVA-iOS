@@ -70,7 +70,9 @@
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     __weak typeof(self) weakSelf = self;
     [_effectInfo.srcs enumerateObjectsUsingBlock:^(YYEVAEffectSource * _Nonnull source, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (!source) return;
         [dic setObject:source forKey:@(source.effect_id)];
+        if (!source.effect_tag || source.effect_tag.length == 0) return;
         id content = [weakSelf.businessEffects objectForKey:source.effect_tag];
         if (content) {
             if (source.type == YYEVAEffectSourceTypeImage) {
@@ -96,25 +98,29 @@
                 }
             } else if (source.type == YYEVAEffectSourceTypeText) {
                 
-                NSDictionary *textDict = (NSDictionary *)content;
+                NSDictionary *textDict = [content isKindOfClass:[NSDictionary class]] ? (NSDictionary *)content : nil;
+                if (!textDict) return;
                 NSAttributedString *attrText = [textDict objectForKey:@"attrText"];
-                if (attrText) {
+                if (attrText && [attrText isKindOfClass:[NSAttributedString class]]) {
                     source.sourceImage = [YSVideoMetalUtils imageWithAttrText:attrText rectSize:CGSizeMake(source.width, source.height)];
                 } else {
                     NSString *text = [textDict objectForKey:@"content"];
+                    if (!text || ![text isKindOfClass:[NSString class]]) return;
                     NSTextAlignment alignment = source.alignment;
                     //如果业务有传，使用业务的数据
                     if ([textDict objectForKey:@"align"] != nil) {
                         alignment = [[textDict objectForKey:@"align"] integerValue];
                     }
                     UIColor *color = [UIColor whiteColor];
-                    if (source.fontColor) {
+                    if (source.fontColor && source.fontColor.length > 1 && [source.fontColor hasPrefix:@"#"]) {
                         const char *cStr = [source.fontColor cStringUsingEncoding:NSASCIIStringEncoding];
-                        long x = strtol(cStr + 1, NULL, 16);
-                        float r = (float)((x >> 16) & 0x000000FF) / 255.0f;
-                        float g = (float)((x >> 8) & 0x000000FF) / 255.0f;
-                        float b = (float)(x & 0x000000FF) / 255.0f;
-                        color = [UIColor colorWithRed:r green:g blue:b alpha:1.0f];
+                        if (cStr) {
+                            long x = strtol(cStr + 1, NULL, 16);
+                            float r = (float)((x >> 16) & 0x000000FF) / 255.0f;
+                            float g = (float)((x >> 8) & 0x000000FF) / 255.0f;
+                            float b = (float)(x & 0x000000FF) / 255.0f;
+                            color = [UIColor colorWithRed:r green:g blue:b alpha:1.0f];
+                        }
                     }
                     float fontSize = source.fontSize;
                     UIFontWeight weight = UIFontWeightHeavy;
@@ -134,9 +140,13 @@
 
     if (dic.count > 0 && _effectInfo.frames.count > 0) {
         [_effectInfo.frames enumerateKeysAndObjectsUsingBlock:^(NSNumber * _Nonnull key, NSArray<YYEVAEffectFrame *> * _Nonnull obj, BOOL * _Nonnull stop) {
-            [obj enumerateObjectsUsingBlock:^(YYEVAEffectFrame *frame, NSUInteger idx, BOOL * _Nonnull stop) {
-                frame.src = [dic objectForKey:@(frame.effect_id)];
-            }];
+            if ([obj isKindOfClass:[NSArray class]]) {
+                [obj enumerateObjectsUsingBlock:^(YYEVAEffectFrame *frame, NSUInteger idx, BOOL * _Nonnull stop) {
+                    if ([frame isKindOfClass:[YYEVAEffectFrame class]]) {
+                        frame.src = [dic objectForKey:@(frame.effect_id)];
+                    }
+                }];
+            }
         }];
     }
 }
